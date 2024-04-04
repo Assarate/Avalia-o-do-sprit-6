@@ -1,0 +1,14 @@
+service: text-to-speech-converter
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: us-east-1
+
+functions:
+  tts:
+    handler: handler.convert_to_speech
+    events:
+      - http:
+          path: v1/tts
+          method: post
