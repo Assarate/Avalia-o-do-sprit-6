@@ -24,3 +24,9 @@ functions:
       - httpApi:
           path: /v2
           method: get
+  tts1:
+    handler: handler.tts1
+    events:
+      - httpApi:
+          path: /v1/tts
+          method: post
